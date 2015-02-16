@@ -228,4 +228,4 @@ class DLM_CF7_Bridge
 }
 
 register_activation_hook( __FILE__, array('DLM_CF7_Bridge', 'checkDependencies'));
-add_action('plugins_loaded', array('DLM_CF7_Bridge', 'maybeLoad'));
+add_action('init', array('DLM_CF7_Bridge', 'maybeLoad'));
