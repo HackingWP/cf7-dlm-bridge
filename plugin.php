@@ -145,7 +145,7 @@ class DLM_CF7_Bridge
         if($token && $download->is_members_only()) {
             $action = $this->getActionString($download->id, $vid);
 
-            trigger_error(json_encode(array($download, $version, $token, $this->getActionString($download->id, $vid))));
+            // trigger_error(json_encode(array($download, $version, $token, $this->getActionString($download->id, $vid))));
 
             return $this->tokenAPI->validate($action, $token);
         }
@@ -198,7 +198,7 @@ class DLM_CF7_Bridge
                     // Generate token
                     $token = $this->tokenAPI->set($this->getActionString($id, $v->id), $ttl, $retries);
 
-                    trigger_error(json_encode(array($token, $this->getActionString($id, $v->id))));
+                    // trigger_error(json_encode(array($token, $this->getActionString($id, $v->id))));
 
                     // Iterate current version data
                     $download->set_version($v->id);
